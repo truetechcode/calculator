@@ -1,5 +1,7 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
+  width: 500px;
+  margin: 0 auto;
 }
 
 .App-logo {
@@ -19,4 +21,25 @@
 
 .App-link {
   color: #09d3ac;
+}
+
+.display-panel {
+  width: 400px;
+  height: 100px;
+  text-align: right;
+  font-size: 2em;
+}
+.row {
+  display: block;
+}
+
+.row button {
+  width: 100px;
+  height: 100px;
+  font-size: 1.2em;
+}
+
+.row button.zero {
+  width: 200px;
+  height: 100px;
 }
