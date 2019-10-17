@@ -15,4 +15,8 @@ Display.propTypes = {
   value: PropTypes.string.isRequired
 };
 
+Display.defaultProps = {
+  value: '0'
+};
+
 export default Display
