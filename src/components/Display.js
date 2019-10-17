@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 
+import "../styles/Display.css";
+
 class Display extends Component {
   render() {
     return (
-      <div>
-        <p className='display-panel'>{this.props.value}</p>        
+      <div className='display-panel'>
+        <p>{this.props.value}</p>        
       </div>
     )
   }
@@ -13,6 +15,10 @@ class Display extends Component {
 
 Display.propTypes = {
   value: PropTypes.string.isRequired
+};
+
+Display.defaultProps = {
+  value: '0'
 };
 
 Display.defaultProps = {
