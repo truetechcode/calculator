@@ -11,7 +11,7 @@ function Button(props) {
 }
 
 Button.propTypes = {
-  name: PropTypes.string
+  name: PropTypes.string.isRequired
 };
 
 Button.defaultProps = {

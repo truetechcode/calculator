@@ -14,7 +14,11 @@ class Display extends Component {
 }
 
 Display.propTypes = {
-  value: PropTypes.string
+  value: PropTypes.string.isRequired
+};
+
+Display.defaultProps = {
+  value: '0'
 };
 
 Display.defaultProps = {
