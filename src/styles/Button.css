@@ -1,0 +1,21 @@
+button {
+  width: 25%;
+  height: 100px;
+  font-size: 1.2em;
+  color: black;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.wide {
+  width: 50%;
+  height: 100px;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.white {
+  background-color: white;
+}
