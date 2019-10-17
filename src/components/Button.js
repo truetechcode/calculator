@@ -5,7 +5,7 @@ import "../styles/Button.css";
 
 function Button(props) {
   let wide = props.wide && 'wide'
-  let color = props.color ? props.color : 'orange'
+  let color = props.color ? props.color : 'white'
   return (
     <button className={`${color} ${wide}`}>{props.name}</button>
   )
