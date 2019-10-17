@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <h1>Calculator App</h1>
-      <Display value='0' />
+      <Display />
       <ButtonPanel />
     </div>
   );

@@ -5,14 +5,17 @@ import "../styles/Button.css";
 
 function Button(props) {
   let wide = props.wide && 'wide'
-  let color = props.color ? props.color : 'white'
   return (
-    <button className={`${color} ${wide}`}>{props.name}</button>
+    <button className={`${props.color} ${wide}`}>{props.name}</button>
   )
 }
 
 Button.propTypes = {
   name: PropTypes.string
+};
+
+Button.defaultProps = {
+  color: 'orange'
 };
 
 export default Button
