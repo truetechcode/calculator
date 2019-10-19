@@ -21,8 +21,4 @@ Display.defaultProps = {
   value: '0'
 };
 
-Display.defaultProps = {
-  value: '0'
-};
-
 export default Display
