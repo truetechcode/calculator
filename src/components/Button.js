@@ -4,9 +4,14 @@ import PropTypes from 'prop-types';
 import "../styles/Button.css";
 
 function Button(props) {
+  // const handleClick = (props) => {
+  //   props.clickHandler
+  // }
+
   let wide = props.wide && 'wide'
+
   return (
-    <button className={`${props.color} ${wide}`}>{props.name}</button>
+    <button onClick={() => props.clickHandler(props.name)} className={`${props.color} ${wide}`}>{props.name}</button>
   )
 }
 

@@ -4,24 +4,28 @@ const operate = (numberOne, numberTwo, operation) => {
   let result = 0
   switch (operation) {
     case '-':
-      result = Big(numberOne) - Big(numberTwo);
+      result = Big(numberOne).minus(numberTwo);
       break;
     case '+':
-      result = Big(numberOne) + Big(numberTwo);
+      result = Big(numberOne).plus(numberTwo);
       break;
     case 'x':
-      result = Big(numberOne) * Big(numberTwo);
+      result = Big(numberOne).times(numberTwo);
       break;
     case '%':
-      result = Big(numberOne) % Big(numberTwo);
+      result = Big(numberOne).mod(numberTwo);
       break;
     case '÷':
-      result = Big(numberOne) / Big(numberTwo);
+      if (numberTwo === 0)
+        result = 'cannot devide by zero!'
+      else
+        result = Big(numberOne).div(numberTwo);
       break;
       
-      default:
+    default:
       result = 'wrong operation'
   }
+
   return result
 }
 

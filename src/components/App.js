@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react'
 import '../styles/App.css';
 
 import calculate from "../logic/calculate";
@@ -6,14 +6,37 @@ import calculate from "../logic/calculate";
 import Display from "./Display";
 import ButtonPanel from "./ButtonPanel";
 
-function App() {
-  return (
-    <div className="App">
+export class App extends Component {
+  constructor(props) {
+    super(props)
+  
+    this.state = {
+       total: null,
+       next: null,
+       operation: null
+    }
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick = (buttonName) => {
+    let {total, next, operation} = calculate(this.state, buttonName);
+    this.setState({
+      total: total,
+      next: next,
+      operation: operation
+    })  
+  }
+  
+  render() {
+    const displayValue = this.state.total ? this.state.total.toString() : '0';
+    return (
+      <div className="App">
       <h1>Calculator App</h1>
-      <Display />
-      <ButtonPanel />
+      <Display value={displayValue} />
+      <ButtonPanel clickHandler={this.handleClick}/>
     </div>
-  );
+    )
+  }
 }
 
-export default App;
+export default App
