@@ -28,7 +28,7 @@ export class App extends Component {
   }
   
   render() {
-    const displayValue = this.state.total ? this.state.total.toString() : '0';
+    const displayValue = this.state.total ? (this.state.next ? this.state.next.toString() : this.state.total.toString()) : '0';
     return (
       <div className="App">
       <h1>Calculator App</h1>

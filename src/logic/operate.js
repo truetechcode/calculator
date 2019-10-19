@@ -16,7 +16,7 @@ const operate = (numberOne, numberTwo, operation) => {
       result = Big(numberOne).mod(numberTwo);
       break;
     case '÷':
-      if (numberTwo === 0)
+      if (numberTwo === '0')
         result = 'cannot devide by zero!'
       else
         result = Big(numberOne).div(numberTwo);

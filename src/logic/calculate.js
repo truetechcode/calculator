@@ -4,22 +4,25 @@ const calculate = (data, buttonName) => {
   let 
       {total, next, operation} = data,
       operations = ['+', '-', 'x', '÷', '%'],
-      numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
+      numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '.'];
 
   if (numbers.includes(buttonName)) {    
     if (total === null){
-      total = parseInt(buttonName);
-    }else{
-      next = parseInt(buttonName);      
+      total = buttonName;
+    }else if (operation === null){
+      total = total + buttonName;
+    }else {
+      if (next === null){
+        next = buttonName;
+      }else {
+        next = next + buttonName;
+      }
     }
-    if (total !== null && next !== null) total = operate(total, next, operation);
   }
 
   if (operations.includes(buttonName)) {
     if (total !== null) {
       operation = buttonName;
-    }else {
-      return {total, next, operation};
     }
   }
 
@@ -33,10 +36,15 @@ const calculate = (data, buttonName) => {
       total = operate(total, next, operation);
       next = null;
       operation = null;
-      return {total, next, operation};
     }
   }
-  console.log({total, next, operation}, buttonName);
+
+  if (buttonName === 'AC') {
+    total = null;
+    next = null;
+    operation = null;
+  }
+
   return {total, next, operation};
 }
 
