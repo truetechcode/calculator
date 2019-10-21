@@ -10,44 +10,40 @@ class ButtonPanel extends Component {
     this.state = {
        
     }
-    this.handleClick = this.handleClick.bind(this);
   }
   
-  handleClick = (buttonName) => {
-    this.props.clickHandler(buttonName)
-  }
   render() {
-
+    const { clickHandler } = this.props;
     return (
       <div className='button-panel'>
         <div className='row'>
-          <Button clickHandler={this.handleClick} color='white' name='AC' /> 
-          <Button clickHandler={this.handleClick} color='white' name='+/-' /> 
-          <Button clickHandler={this.handleClick} color='white' name='%' /> 
-          <Button clickHandler={this.handleClick} name='÷' />
+          <Button clickHandler={clickHandler} color='white' name='AC' /> 
+          <Button clickHandler={clickHandler} color='white' name='+/-' /> 
+          <Button clickHandler={clickHandler} color='white' name='%' /> 
+          <Button clickHandler={clickHandler} name='÷' />
         </div>
         <div className='row'>
-          <Button clickHandler={this.handleClick} color='white' name='7' /> 
-          <Button clickHandler={this.handleClick} color='white' name='8' /> 
-          <Button clickHandler={this.handleClick} color='white' name='9' /> 
-          <Button clickHandler={this.handleClick} name='x' />
+          <Button clickHandler={clickHandler} color='white' name='7' /> 
+          <Button clickHandler={clickHandler} color='white' name='8' /> 
+          <Button clickHandler={clickHandler} color='white' name='9' /> 
+          <Button clickHandler={clickHandler} name='x' />
         </div>
         <div className='row'>
-          <Button clickHandler={this.handleClick} color='white' name='4' /> 
-          <Button clickHandler={this.handleClick} color='white' name='5' /> 
-          <Button clickHandler={this.handleClick} color='white' name='6' /> 
-          <Button clickHandler={this.handleClick} name='-' />
+          <Button clickHandler={clickHandler} color='white' name='4' /> 
+          <Button clickHandler={clickHandler} color='white' name='5' /> 
+          <Button clickHandler={clickHandler} color='white' name='6' /> 
+          <Button clickHandler={clickHandler} name='-' />
         </div>
         <div className='row'>
-          <Button clickHandler={this.handleClick} color='white' name='1' /> 
-          <Button clickHandler={this.handleClick} color='white' name='2' /> 
-          <Button clickHandler={this.handleClick} color='white' name='3' /> 
-          <Button clickHandler={this.handleClick} name='+' />
+          <Button clickHandler={clickHandler} color='white' name='1' /> 
+          <Button clickHandler={clickHandler} color='white' name='2' /> 
+          <Button clickHandler={clickHandler} color='white' name='3' /> 
+          <Button clickHandler={clickHandler} name='+' />
         </div>
         <div className='row'>
-          <Button clickHandler={this.handleClick} color='white' wide={true} name='0' /> 
-          <Button clickHandler={this.handleClick} color='white' name='.' /> 
-          <Button clickHandler={this.handleClick} name='=' />
+          <Button clickHandler={clickHandler} color='white' wide={true} name='0' /> 
+          <Button clickHandler={clickHandler} color='white' name='.' /> 
+          <Button clickHandler={clickHandler} name='=' />
         </div>
       </div>
     )

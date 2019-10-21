@@ -4,12 +4,13 @@ import PropTypes from 'prop-types';
 import "../styles/Button.css";
 
 function Button(props) {
-  let wide = props.wide && 'wide'
+  const {wide, color} = props
+  const wider = wide && 'wide'
 
   return (
     <button 
       onClick={() => props.clickHandler(props.name)} 
-      className={`${props.color} ${wide}`}
+      className={`${color} ${wider}`}
     >
       {props.name}
     </button>
@@ -17,7 +18,9 @@ function Button(props) {
 }
 
 Button.propTypes = {
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired,
+  wide: PropTypes.bool.isRequired
 };
 
 Button.defaultProps = {
