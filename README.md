@@ -1,11 +1,11 @@
 # React Calculator App
 
-## Description
-
 This calculator project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Tools use
 
+![ScreenShoot](calculator-app.png)
+
+## Tools use
 
     Node.js
     React
@@ -15,17 +15,29 @@ This calculator project was bootstrapped with [Create React App](https://github.
     CSS
     ES6
 
-
 ### `Live Site on Heroku`
 
 - Open [HEROKU](https://myreact-calculator.herokuapp.com/) to view it in the browser.
 
-### `Developer`
+## Getting Started
 
-- Terver Aosu [Github](https://github.com/truetechcode).
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-<br/>
+### Prerequisites
 
+This project is built with JavaScript and it depends on [Node.js & NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) so you will need to make sure it is installed.
+To verify you have successfully installed them run `node -v` to make sure node is installed. Example
+
+```
+$ node -v
+v8.16.2
+```
+Run `npm -v` to verify npm is installed successfully.
+
+```
+$ npm -v
+6.4.1
+```
 ## Available Scripts
 
 In the project directory, you can run:
@@ -53,3 +65,18 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+## Deployment
+
+### Deploy on Heroku
+
+You can deploy the project on [Heroku](https://www.heroku.com/) using the following steps:
+
+    1. Create a Heroku Account
+    2. On the terminal, run `heroku create` to create a new app
+    3. Run `heroku push` to start a deployment on Heroku.
+    4. Visit your project URL as assigned by Heroku to see a live deployment.
+
+
+## Authors
+
+* **Terver Aosu** - [truetechcode](https://github.com/truetechcode)
